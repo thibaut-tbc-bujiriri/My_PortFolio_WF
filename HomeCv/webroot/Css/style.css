@@ -573,9 +573,9 @@ section{
     margin-top: 130px;
 }
 .contact-text h2{
-    position: relative;
-    right: 150px;
-    bottom: 40px;
+    /* position: relative; */
+    /* right: 150px; */
+    /* bottom: 40px; */
     font-size: 60px;
     line-height: 1;
     text-align: center;
@@ -697,36 +697,6 @@ section{
     border-radius: 0.5rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @keyframes RouleDroit{
     0%{
         transform: translateX(-100px);
@@ -765,5 +735,72 @@ section{
     100%{
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+}
+
+
+@media (max-width: 900px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #111;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        border-radius: 5px;
+        padding: 10px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        transition: all 0.3s ease;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .navbar a:hover {
+        background-color: #0ef;
+        color: #000;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .about-text{
+        position: relative;
+        right: 20px;
+    }
+    .back{
+        position: absolute;
+        top: 118.5%;
+        right: 300px;
+        left: 30px;
+        background-color: #08161f;
+        border-radius: 100%;
+        width: 430px;
+        height: 430px;
+        box-shadow: 1px 1px 50px #0ef;
+        border: 5px solid;
+        border-color: #3ef;
+        animation: RouleDroit 1s ease forwards;
     }
 }

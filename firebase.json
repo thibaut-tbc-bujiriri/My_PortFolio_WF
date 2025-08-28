@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "HomeCvTbc",
+    "public": "HomeCv",
     "ignore": [
       "firebase.json",
       "**/.*",
