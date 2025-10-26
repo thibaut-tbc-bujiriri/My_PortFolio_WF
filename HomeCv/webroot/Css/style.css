@@ -91,6 +91,13 @@ body{
     animation: RouleGauche 1s ease forwards;
     animation-delay: 1s;
 }
+.home-content .bx-download{
+    position: relative;
+    top: 5px;
+    margin-right: 8px;
+    font-size: 25px;
+    font-weight: 700;
+}
 .home-sci a{
     display: inline-flex;
     justify-content: center;
@@ -176,6 +183,13 @@ body{
 .Center2{
     position: relative;
     top: 30px;
+}
+.about-text .bx-link{
+    position: relative;
+    top: 5px;
+    margin-right: 8px;
+    font-size: 25px;
+    font-weight: 700;
 }
 .about-text h2{
     font-size: 60px;
