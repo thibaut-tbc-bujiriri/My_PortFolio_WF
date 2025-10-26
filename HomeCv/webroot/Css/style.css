@@ -804,3 +804,40 @@ section{
         animation: RouleDroit 1s ease forwards;
     }
 }
+
+@media (max-width: 542px){
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #111;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 80px;
+        border-radius: 5px;
+        padding: 10px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        transition: all 0.3s ease;
+    }
+    .navbar.active {
+        display: flex;
+    }
+    .navbar a {
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .navbar a:hover {
+        background-color: #0ef;
+        color: #000;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .back{
+        display: none;
+    }
+}
