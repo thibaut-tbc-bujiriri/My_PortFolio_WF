@@ -17,10 +17,10 @@
     <header class="header">
         <a href="#" class="logo">PortFolio</a>
 
-        <div class="hamburger" id="hamburger">
+        <button type="button" class="hamburger" id="hamburger" aria-label="Ouvrir le menu">
             <i class='bx bx-menu'></i>
-        </div>
-        <nav class="navbar" id="navbar">
+        </button>
+        <nav class="navbar" id="navbar" aria-label="Navigation principale">
             <a href="#" style="--i:1" class="active">Home</a>
             <a href="#about" style="--i:2" class="active">About</a>
             <a href="#services" style="--i:5" class="active">Service</a>
@@ -128,7 +128,7 @@
         </div>
     </section>
     <h1 class="sous-titre">My <span>Skills</span></h1>
-    <section>
+    <section class="skills-section">
         <div class="container1" id="Skills">
             <h1 class="heading1">Technical Skills</h1>
             <div class="Technical-bars">
@@ -176,7 +176,7 @@
         </div>
 
         <div class="container1">
-            <h1 class="heading1">Profesional Skills</h1>
+            <h1 class="heading1">Professional Skills</h1>
             <div class="radial-bars">
                 <div class="radial-bar">
                     <svg x="0px" y="0px" viewbox="0 0 200 200">
@@ -288,7 +288,7 @@
                 <input type="text" placeholder="Entrez votre nom" name="nom" required>
                 <input type="email" placeholder="Entrez votre mail" name="mail" required>
                 <input type="text" placeholder="Entrez votre sujet" name="sujet" required>
-                <textarea name="message" placeholder="votrez votre message" cols="50" rows="10" required></textarea>
+                <textarea name="message" placeholder="Entrez votre message" cols="50" rows="10" required></textarea>
                 <input id="Submit" type="submit" value="Envoyez" class="send">
             </form>
         </div>

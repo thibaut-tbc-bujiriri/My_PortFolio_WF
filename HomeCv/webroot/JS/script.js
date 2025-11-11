@@ -30,8 +30,42 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 
 const hamburger = document.getElementById("hamburger");
 const navbar = document.getElementById("navbar");
+const hamburgerIcon = hamburger.querySelector("i");
+const navLinks = navbar.querySelectorAll("a");
 
-hamburger.addEventListener("click", () => {
-    navbar.classList.toggle("active");
-    hamburger.classList.toggle("bx-x");
+hamburger.setAttribute("aria-expanded", "false");
+
+const setMenuState = (shouldOpen) => {
+    const isOpen = typeof shouldOpen === "boolean" ? shouldOpen : !navbar.classList.contains("active");
+    navbar.classList.toggle("active", isOpen);
+    hamburger.setAttribute("aria-expanded", isOpen);
+
+    if (isOpen) {
+        hamburgerIcon.classList.remove("bx-menu");
+        hamburgerIcon.classList.add("bx-x");
+    } else {
+        hamburgerIcon.classList.add("bx-menu");
+        hamburgerIcon.classList.remove("bx-x");
+    }
+};
+
+hamburger.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setMenuState();
+});
+
+navLinks.forEach((link) => {
+    link.addEventListener("click", () => setMenuState(false));
+});
+
+document.addEventListener("click", (event) => {
+    if (!navbar.contains(event.target) && !hamburger.contains(event.target)) {
+        setMenuState(false);
+    }
+});
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+        setMenuState(false);
+    }
 });
