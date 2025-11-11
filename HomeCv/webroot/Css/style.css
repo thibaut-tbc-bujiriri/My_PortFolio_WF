@@ -168,30 +168,35 @@ body{
     gap: clamp(2rem, 6vw, 4rem);
     padding: clamp(60px, 12vh, 120px) clamp(16px, 8vw, 120px);
 }
-.back{
+.about-img .back{
     position: absolute;
-    inset: 50% auto auto 10%;
-    transform: translate(-10%, -50%);
-    background-color: rgba(8, 22, 31, 0.9);
-    border-radius: 50%;
+    top: 24%;
+    left: 10%;
+    transform: translate(-50%, -50%);
     width: min(420px, 65vw);
     aspect-ratio: 1 / 1;
+    background-color: rgba(8, 22, 31, 0.9);
+    border-radius: 50%;
     box-shadow: 0 0 50px rgba(0, 238, 255, 0.25);
     border: 3px solid var(--primary);
     animation: RouleDroit 1s ease forwards;
     pointer-events: none;
+    z-index: 0;
 }
 .about-img{
     position: relative;
     z-index: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .about-img img{
     max-width: min(360px, 80vw);
     width: 100%;
     height: auto;
     border-radius: 50%;
+    position: relative;
+    z-index: 1;
     animation: RouleDroit 1s ease forwards;
 }
 .about-text{
@@ -866,10 +871,8 @@ body{
     .about-text p{
         margin-bottom: 2rem;
     }
-    .back{
-        inset: 10% auto auto 50%;
-        transform: translate(-50%, -10%);
-        width: min(380px, 70vw);
+    .about-img .back{
+        width: min(360px, 75vw);
     }
     .skills-section{
         grid-template-columns: 1fr;
@@ -960,7 +963,7 @@ body{
     .Home{
         padding: 120px clamp(14px, 8vw, 24px) 80px;
     }
-    .back{
+    .about-img .back{
         display: none;
     }
     .home-content h3{
